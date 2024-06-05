@@ -1,0 +1,15 @@
+meta {
+  name: ActuatorAlive
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:8025/pflegeeinrichtung/api/v1/actuator
+  body: none
+  auth: none
+}
+
+assert {
+  res.status: eq 200
+}
