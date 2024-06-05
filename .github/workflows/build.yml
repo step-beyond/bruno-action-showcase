@@ -1,7 +1,9 @@
 name: Build and Validate
 
-on: [push]
-
+on:
+  pull_request:
+  push:
+  
 jobs:
   build_core:
     runs-on: ubuntu-latest
@@ -23,3 +25,9 @@ jobs:
 
       - name: Wait for service
         run: curl --retry-max-time 60 --retry 100 --retry-delay 1 --retry-connrefused -fail http://localhost:8080/api/actuator/health
+          
+      - name: Test Bruno 
+        uses: step-beyond/bruno-action@1.0.15
+        with:
+          directory: ./bruno/SampleBrunoCollection
+          output-type: pr
