@@ -26,5 +26,5 @@ jobs:
       - name: Test Bruno 
         uses: step-beyond/bruno-action@1.0.14
         with:
-          directory: ./bruno
+          directory: ./bruno/SampleBrunoCollection
           output-type: pr
