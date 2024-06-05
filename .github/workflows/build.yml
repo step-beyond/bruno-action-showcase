@@ -16,4 +16,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Build
-        run: ./gradlew build
+        run: ./gradlew bootRun &
+
+      - name: Wait for service
+        run: curl --retry-max-time 60 --retry 100 --retry-delay 1 --retry-connrefused -fail http://localhost:8080/api/actuator/health
