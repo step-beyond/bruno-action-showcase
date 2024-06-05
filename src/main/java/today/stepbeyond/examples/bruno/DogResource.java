@@ -14,9 +14,9 @@ public class DogResource {
 
     public DogResource() {
         this.dogRepository =  new HashMap<>(Map.of(
-                UUID.randomUUID(), "Bulldog",
-                UUID.randomUUID(), "Labrador",
-                UUID.randomUUID(), "Poodle"));
+                UUID.fromString("9FF0C130-55D2-46A2-A76F-DE7D2ADBA396"), "Bulldog",
+                UUID.fromString("279AC36F-934F-42F3-A169-B15ECDB0A19C"), "Labrador",
+                UUID.fromString("18AAEB1C-D949-40AD-BFD0-40A581FEC1CE"), "Poodle"));
 
 
     }

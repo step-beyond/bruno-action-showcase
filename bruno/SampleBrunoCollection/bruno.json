@@ -1,9 +1,5 @@
 {
   "version": "1",
-  "name": "HelloWorldBrunoCollection",
-  "type": "collection",
-  "ignore": [
-    "node_modules",
-    ".git"
-  ]
+  "name": "DogEndpointCollection",
+  "type": "collection"
 }

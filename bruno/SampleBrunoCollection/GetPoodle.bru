@@ -1,0 +1,16 @@
+meta {
+  name: GetPoodle
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:8080/api/dogs/18AAEB1C-D949-40AD-BFD0-40A581FEC1CE
+  body: none
+  auth: none
+}
+
+assert {
+  res.status: eq 200
+  res.body: eq Poodle
+}
