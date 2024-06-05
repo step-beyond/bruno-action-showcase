@@ -1,0 +1,19 @@
+name: Build and Validate
+
+on: [push]
+
+jobs:
+  build_core:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '22'
+          distribution: 'temurin'
+
+      - name: Build
+        run: ./gradlew build
